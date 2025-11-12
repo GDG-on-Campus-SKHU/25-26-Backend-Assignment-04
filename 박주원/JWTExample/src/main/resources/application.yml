@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER_NAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: false
+    open-in-view: false
+
+jwt:
+  secret: 0W3uWQ99BLmtrwwA/H40EMsqIbsnnQtijQu++VN+E5s=
+  access-token-validity-in-milliseconds: 180000000
