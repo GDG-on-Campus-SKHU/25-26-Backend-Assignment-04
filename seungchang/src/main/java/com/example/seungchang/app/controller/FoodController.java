@@ -28,7 +28,7 @@ public class FoodController {
         return ApiResponseTemplate.success(SuccessCode.FOOD_CREATED, foodResponseDto);
     }
 
-    @PutMapping("update/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<ApiResponseTemplate<FoodResponseDto>> updateFood(@PathVariable Long id, @RequestBody @Valid FoodRequestDto foodRequestDto){
         FoodResponseDto foodResponseDto = foodService.updateFood(id, foodRequestDto);
         return ApiResponseTemplate.success(SuccessCode.FOOD_UPDATED, foodResponseDto);
